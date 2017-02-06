@@ -1,8 +1,8 @@
 {
   "name": "kalam/taka-converter",
-  "description": "Convert Taka",
+  "description": "Convert Taka amount to word or word to numeric",
   "license": "MIT",
-  "keywords": ["print", "Printer"],
+  "keywords": ["Taka", "Taka conversion"],
   "minimum-stability": "dev",
   "authors": [
     {
