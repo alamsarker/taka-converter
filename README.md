@@ -1,25 +1,56 @@
 # taka-converter
 
-Covert taka numeric value to word.
+Covert numeric taka to word.
 
-Install
+Installation
 
 ```
 composer require kalam/taka-converter dev-master
 ```
 Example
 ```
-$converter = new TakaConverter(1000);
-$converter->convert(); // one thousand
+<?php
 
-$converter = new TakaConverter(120300);
-$converter->convert(); // one lac twenty thousand three hundred
+include('vendor/autoload.php');
+
+echo (new Kalam\TakaConverter\TakaConverter(101))->convert(); 
+// one hundred one
+
+echo (new Kalam\TakaConverter\TakaConverter(1000))->convert(); 
+// one thousand
+
+echo (new Kalam\TakaConverter\TakaConverter(120350))->convert();
+// one lac twenty thousand three hundred fifty
+
+echo (new Kalam\TakaConverter\TakaConverter(12109530))->convert(); 
+// one crore twenty one lac nine thousand five hundred thirty
+
+echo (new Kalam\TakaConverter\TakaConverter(1002109530))->convert(); 
+// one hundred  crore twenty one lac nine thousand five hundred thirty
+?>
 ```
 Or
 
 ```
-$converter = new WordConverter(1000);
-$converter->convert(); // one thousand
+<?php
+include('vendor/autoload.php');
 
-$converter = new TakaConverter(120300);
-$converter->convert(); // one lac twenty thousand three hundred
+echo (new Kalam\TakaConverter\WordConverter(101))->convert(); 
+// one hundred one
+
+echo (new Kalam\TakaConverter\WordConverter(1000))->convert(); 
+// one thousand
+
+echo (new Kalam\TakaConverter\WordConverter(120350))->convert(); 
+// one lac twenty thousand three hundred fifty
+
+echo (new Kalam\TakaConverter\WordConverter(12109530))->convert(); 
+// one crore twenty one lac nine thousand five hundred thirty
+
+echo (new Kalam\TakaConverter\WordConverter(1002109530))->convert(); 
+// one hundred  crore twenty one lac nine thousand five hundred thirty
+?>
+```
+
+Drawback
+ - Its not supported decimal point
