@@ -4,6 +4,7 @@
   "license": "MIT",
   "keywords": ["Taka", "Taka conversion"],
   "minimum-stability": "stable",
+  "version" : "1.0.0",
   "authors": [
     {
       "name":"Kausar Alam",
