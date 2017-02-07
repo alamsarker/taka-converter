@@ -3,7 +3,7 @@
   "description": "Convert Taka amount to word or word to numeric",
   "license": "MIT",
   "keywords": ["Taka", "Taka conversion"],
-  "minimum-stability": "dev",
+  "minimum-stability": "stable",
   "authors": [
     {
       "name":"Kausar Alam",
