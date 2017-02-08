@@ -2,12 +2,12 @@
 
 Covert numeric taka to word.
 
-Installation
+## Installation
 
 ```
 composer require kalam/taka-converter dev-master
 ```
-Example
+## Example
 ```
 <?php
 
@@ -52,5 +52,5 @@ echo (new Kalam\TakaConverter\WordConverter(1002109530))->convert();
 ?>
 ```
 
-Drawback
+## Drawback
  - Its not supported decimal point
