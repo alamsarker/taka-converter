@@ -14,19 +14,20 @@ composer require kalam/taka-converter dev-master
 include('vendor/autoload.php');
 
 echo (new Kalam\TakaConverter\TakaConverter(101))->convert(); 
-// one hundred one
+// One Hundred One Only
 
 echo (new Kalam\TakaConverter\TakaConverter(1000))->convert(); 
-// one thousand
+// One Thousand  Only
 
 echo (new Kalam\TakaConverter\TakaConverter(120350))->convert();
-// one lac twenty thousand three hundred fifty
+// One Lac Twenty Thousand Three Hundred Fifty Only
 
 echo (new Kalam\TakaConverter\TakaConverter(12109530))->convert(); 
-// one crore twenty one lac nine thousand five hundred thirty
+// One Crore Twenty One Lac Nine Thousand Five Hundred Thirty Only
 
-echo (new Kalam\TakaConverter\TakaConverter(1002109530))->convert(); 
-// one hundred  crore twenty one lac nine thousand five hundred thirty
+echo (new Kalam\TakaConverter\TakaConverter(10021095.959))->convert(); 
+// One Crore Twenty One Thousand Ninety Five And Ninety Six Poisa Only
+
 ?>
 ```
 Or
@@ -36,21 +37,18 @@ Or
 include('vendor/autoload.php');
 
 echo (new Kalam\TakaConverter\WordConverter(101))->convert(); 
-// one hundred one
+// One Hundred One Only
 
 echo (new Kalam\TakaConverter\WordConverter(1000))->convert(); 
-// one thousand
+// One Thousand  Only
 
 echo (new Kalam\TakaConverter\WordConverter(120350))->convert(); 
-// one lac twenty thousand three hundred fifty
+// One Lac Twenty Thousand Three Hundred Fifty Only
 
 echo (new Kalam\TakaConverter\WordConverter(12109530))->convert(); 
-// one crore twenty one lac nine thousand five hundred thirty
+// One Crore Twenty One Lac Nine Thousand Five Hundred Thirty Only
 
-echo (new Kalam\TakaConverter\WordConverter(1002109530))->convert(); 
-// one hundred  crore twenty one lac nine thousand five hundred thirty
+echo (new Kalam\TakaConverter\WordConverter(10021095.959))->convert(); 
+// One Crore Twenty One Thousand Ninety Five And Ninety Six Poisa Only
 ?>
 ```
-
-## Drawback
- - Its not supported decimal point
