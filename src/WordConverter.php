@@ -55,9 +55,9 @@ class WordConverter extends AbstractConverter {
     protected function convertToWord($amount)
     {        
         $word = '';
-        $splitAmounts = preg_split("/\./", round($amount,2));
+        $splitAmounts = preg_split("/\./", number_format($amount,2,'.',''));
         $amount = $splitAmounts[0];        
-   
+        
         if( strlen($amount) >= self::CRORE  ) { // crore
             $chunkLength = (strlen($amount) - ( self::CRORE - 1));
             $chunkAmount = substr($amount, 0, $chunkLength);
@@ -65,10 +65,11 @@ class WordConverter extends AbstractConverter {
             $word .= $this->convertUpToLac($chunkAmount)  . ' crore ';
         }
 
-        $word .= $this->convertUpToLac($amount);
+        $word .= $this->convertUpToLac($amount). ' Taka';
 
         if( isset($splitAmounts[1]) ) {
-            $word .= ' and ' . $this->taka[ $splitAmounts[1]] . ' poisa';
+            if((int)$splitAmounts[1]!=0)
+                $word .= ' and ' . $this->taka[ $splitAmounts[1]] . ' poisa';
         }
         
         $word .= ' only';
